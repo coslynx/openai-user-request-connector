@@ -1,0 +1,37 @@
+[tool.poetry]
+name = "ai-connector-mvp"
+version = "0.1.0"
+description = "AI Connector for User Requests - Minimum Viable Product"
+authors = ["Your Name <your.email@example.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+fastapi = "^0.115.2"
+uvicorn = "^0.32.0"
+pydantic = "^2.9.2"
+sqlalchemy = "^2.0.36"
+psycopg2-binary = "^2.9.10"
+openai = "^1.52.0"
+python-multipart = "^0.0.12"
+dotenv = "^0.0.5"
+pytest = "^8.3.3"
+pytest-cov = "^5.0.0"
+flake8 = "^7.1.1"
+
+[tool.poetry.dev-dependencies]
+# Add any development dependencies here
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+addopts = "-vv -s --cov=src --cov-report=term-missing --cov-report=html"
+
+[tool.flake8]
+max-line-length = 120
+exclude = ["venv/", "migrations/"]
+
+[tool.isort]
+profile = "black"
